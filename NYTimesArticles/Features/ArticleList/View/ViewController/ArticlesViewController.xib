@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticlesViewController" customModule="NYTimesArticles" customModuleProvider="target">
+            <connections>
+                <outlet property="articlesTableView" destination="HjH-x9-bvi" id="iDI-cD-etj"/>
+                <outlet property="view" destination="T07-Q7-gQl" id="33Q-lp-5Dq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="T07-Q7-gQl">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HjH-x9-bvi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7n9-Dz-OPA"/>
+                        <outlet property="delegate" destination="-1" id="fhp-WA-acA"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="9XW-YO-amj"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HjH-x9-bvi" firstAttribute="top" secondItem="9XW-YO-amj" secondAttribute="top" id="QRD-r0-B7k"/>
+                <constraint firstItem="9XW-YO-amj" firstAttribute="bottom" secondItem="HjH-x9-bvi" secondAttribute="bottom" id="Vtp-lb-1T7"/>
+                <constraint firstItem="9XW-YO-amj" firstAttribute="trailing" secondItem="HjH-x9-bvi" secondAttribute="trailing" id="b28-er-yWD"/>
+                <constraint firstItem="HjH-x9-bvi" firstAttribute="leading" secondItem="9XW-YO-amj" secondAttribute="leading" id="uuS-S0-Yjj"/>
+            </constraints>
+            <point key="canvasLocation" x="171" y="-518"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
