@@ -2,7 +2,7 @@
 
 ### Overview:
 
-this sample app to apply MVP architecture + Software principals, i tried to keep it simple without breaking the software principals.
+this sample app to apply MVP architecture + Software principles, i tried to keep it simple without breaking the software principles.
 
 ### Requirements
 
