@@ -10,6 +10,24 @@ import XCTest
 
 class NYTimesArticlesTests: XCTestCase {
 
+    
+    func testViewDidLoadSuccess() {
+        // load API data
+        urlSessionMock.data = try! JSONEncoder().encode(apiPosts)
+
+        presenter.viewDidLoad()
+
+        // waiting
+        completionQueue.sync {}
+
+        XCTAssertTrue(view.didShowLoading)
+        XCTAssertTrue(view.didHideLoading)
+        XCTAssertTrue(view.didShowPosts)
+        XCTAssertFalse(view.didShowError)
+        XCTAssertEqual(apiPosts, presenter.posts)
+        XCTAssertEqual(presenter.postsCount, apiPosts.count)
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
